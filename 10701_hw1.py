@@ -4,6 +4,9 @@ import numpy as np
 import math
 
 
+# This function takes a list of data points and a list of theta parameter,
+# and then make a plot of log-likelihood function vs theta parameter. It will 
+# also mark the maximum likelihood estimator on the plot.
 def plotMLE(X,Theta):
     X_s = sum(X)
     n = len(X)
@@ -18,6 +21,11 @@ def plotMLE(X,Theta):
     plt.xlabel(r"$\theta$")
     plt.ylabel(r"$l(\theta)$")
 
+
+# This function takes a list of data points, a list of theta parameter and two
+# parameters alpha and beta that are used to tune the beta distribution.
+# It makes a plot of log-posterior function vs theta parameter. It will also 
+# mark the maximum a posteriori estimater on the plot.
 def plotMAP(X,Theta,a,b):
     X_s = sum(X)
     n = len(X)
